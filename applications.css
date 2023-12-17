@@ -1,0 +1,25 @@
+body {
+    font-family: 'Montserrat';
+    font-family: Arial, sans-serif;
+    background-color: #CECEBE;
+    margin: 0;
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+#applicationsList {
+    list-style: none;
+    padding: 0;
+}
+#applicationsList li {
+    background-color: #D6D6C2;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#applicationsList li:last-child {
+    margin-bottom: 0;
+}

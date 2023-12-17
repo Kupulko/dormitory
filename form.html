@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Application for Dormitory Accommodation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600;700;800&family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/formstyle">
+</head>
+<body>
+    <h1>Форма на поселення</h1>
+    <form id="accommodationForm" enctype="multipart/form-data">
+        <label for="firstName">Ім'я:</label><br>
+        <input type="text" id="firstName" name="firstName" required><br>
+        
+        <label for="lastName">Прізвище:</label><br>
+        <input type="text" id="lastName" name="lastName" required><br>
+        
+        <label for="middleName">По-батькові:</label><br>
+        <input type="text" id="middleName" name="middleName"><br>
+        
+        <label for="dob">Дата народження:</label><br>
+        <input type="date" id="dob" name="dob" required><br>
+        
+        <label for="specialty">Спеціальність:</label><br>
+        <input type="text" id="specialty" name="specialty" required><br>
+        
+        <label for="phoneNumber">Номер телефону:</label><br>
+        <input type="tel" id="phoneNumber" name="phoneNumber" required><br>
+        
+        <label for="hostelNumber">Номер гуртожитку:</label><br>
+        <input type="number" id="hostelNumber" name="hostelNumber" required><br>
+        
+        <label for="documents">Документи(за необхідності):</label><br>
+        <input type="file" id="documents" name="documents"><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById("accommodationForm").addEventListener("submit", async function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(this);
+            const response = await fetch("/submitAccommodationForm", {
+                method: "POST",
+                body: formData
+            });
+
+            const data = await response.json();
+            console.log(data);
+            // Handle response as needed (redirect, display message, etc.)
+        });
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+/* formstyle.css */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #CECEBE;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#accommodationForm {
+    width: 700px;
+    margin-left: 400px;
+    padding: 20px;
+    background-color: #D6D6C2;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#accommodationForm label {
+    display: block;
+}
+
+#accommodationForm input[type="text"],
+#accommodationForm input[type="date"],
+#accommodationForm input[type="number"],
+#accommodationForm input[type="tel"],
+#accommodationForm input[type="file"] {
+    width: calc(100% - 10px);
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #BABAA5;
+    background-color: #BABAA5;
+}
+
+#accommodationForm input[type="submit"] {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #D94426;
+    color: #fff;
+    cursor: pointer;
+}
+
+#accommodationForm input[type="submit"]:hover {
+    background-color: #CF2C0B;
+}

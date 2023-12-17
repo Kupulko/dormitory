@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Applications List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600;700;800&family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/appstyle">
+</head>
+<body>
+    <h1>Подані заявки</h1>
+    <ul id="applicationsList">
+    </ul>
+
+    <script>
+
+fetch('/getApplications')
+            .then(response => response.json())
+            .then(data => {
+                const applicationsList = document.getElementById('applicationsList');
+                data.forEach(application => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `${application.last_name} ${application.first_name} Гуртожиток №${application.hostel_number}`;
+                    applicationsList.appendChild(listItem);
+                });
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600;700;800&family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/signupstyle">
+</head>
+<body>
+    <div class="registration-container">
+        <h2>Реєстрація</h2>
+        <form id="registrationForm" action="/signup" method="POST">
+            <input type="text" name="name" placeholder="Name" required><br>
+            <input type="email" name="email" placeholder="Email" required><br>
+            <input type="password" name="password" placeholder="Password" required><br>
+            <button type="submit">Зареєструватися</button>
+        </form>
+        
+        <p>Вже маєте акаунт? <a href="/login">Логін тут</a></p>
+    </div>
+    
+    
+</body>
+</html>
